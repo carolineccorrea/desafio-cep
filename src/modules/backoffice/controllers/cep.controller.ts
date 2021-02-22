@@ -41,8 +41,14 @@ export class CEPController {
     async post(@Body() model: CreateCEPDTO) {
         try {
             const newCEP = new CEP(model.codigo_loja, model.faixa_inicio, model.faixa_fim)
-            const cep = await this.accountService.create(newCEP);
-            return new Result('Cep criado com sucesso', true, cep, null);
+            const resul = await this.accountService.valid(newCEP.faixa_inicio)
+            console.log(resul)
+            if (resul) {
+                const cep = await this.accountService.create(newCEP);
+                return new Result('Cep criado com sucesso', true, cep, null);
+            } else {
+                return new Result('Erro na faixa', false, resul, null);
+            }
         } catch (error) {
             throw new HttpException(new Result('Ops algo errado aconteceu', false, null, null), HttpStatus.BAD_REQUEST)
         }
@@ -58,3 +64,4 @@ export class CEPController {
     }
 
 }
+
