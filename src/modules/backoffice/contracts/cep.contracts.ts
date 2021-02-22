@@ -10,8 +10,8 @@ export class CreateCEPContract implements Contract {
     validate(model: CreateCEPDTO): boolean {
         const validator = new Validator();
 
-        validator.isFixedLen(model.faixa_inicio, 8, 'dado inválido: faixa inicio');
-        validator.isFixedLen(model.faixa_fim, 8, 'dado inválido: faixa fim');
+       // validator.isFixedLen(model.faixa_inicio, 8, 'dado inválido: faixa inicio');
+        //validator.isFixedLen(model.faixa_fim, 8, 'dado inválido: faixa fim');
     
 
         this.errors = validator.errors;
