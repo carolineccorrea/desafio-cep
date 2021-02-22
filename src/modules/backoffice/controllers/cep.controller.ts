@@ -28,23 +28,23 @@ export class CEPController {
 
     @Get()
     async getAll(): Promise<CEP[]> {
-       // return new Result(null, true, [], null);
-       return this.accountService.getAll();
+        // return new Result(null, true, [], null);
+        return this.accountService.getAll();
     }
     @Get(':id')
     async getdById(@Param('id') id: string): Promise<ICEP> {
-       // return new Result(null, true, document, null);
-       return this.accountService.getdById(id)
+        // return new Result(null, true, document, null);
+        return this.accountService.getdById(id)
     }
     @Post()
     @UseInterceptors(new ValidatorInterceptor(new CreateCEPContract()))
     async post(@Body() model: CreateCEPDTO) {
         try {
-            const newCEP = new CEP(model.codigo_loja,model.faixa_inicio,model.faixa_fim)
-        const cep = await this.accountService.create(newCEP);
-        return new Result('Cep criado com sucesso', true, cep, null);
+            const newCEP = new CEP(model.codigo_loja, model.faixa_inicio, model.faixa_fim)
+            const cep = await this.accountService.create(newCEP);
+            return new Result('Cep criado com sucesso', true, cep, null);
         } catch (error) {
-            throw new HttpException(new Result('Ops algo errado aconteceu',false,null,null), HttpStatus.BAD_REQUEST)
+            throw new HttpException(new Result('Ops algo errado aconteceu', false, null, null), HttpStatus.BAD_REQUEST)
         }
     }
     @Put(':id')
