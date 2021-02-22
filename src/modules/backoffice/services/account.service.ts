@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import * as mongoose from 'mongoose';
@@ -19,13 +20,30 @@ export class AccountService {
         return await c.save();
     }
 
-    async getdById( _id: string ): Promise<ICEP> {
+    async getdById(_id: string): Promise<ICEP> {
         return await this.cepModel
-        .findById({ _id })
-        .exec();
+            .findById({ _id })
+            .exec();
     }
 
     async update(_id: string, data: any): Promise<ICEP> {
         return await this.cepModel.findOneAndUpdate({ _id }, data);
+    }
+
+    async valid(fi): Promise<boolean> {
+        const dados = await this.cepModel.find().exec()
+        // let re = true;
+        if (dados) {
+            let re;
+            dados.forEach((e) => {
+                if (fi === e.faixa_fim) {
+                    re = false;
+                }
+                else {
+                    re = true;
+                }
+            })
+            return re;
+        }
     }
 }
