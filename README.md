@@ -8,9 +8,8 @@ Projeto de cadastro de ceps
 	
 ## Technologies
 Project is created with: 
-* Nest Framework: 5.4.0
-* Mongodb version: 7.2.2
-* 
+* Nest Framework: ^7.5.1
+* Mongodb version: ^7.2.2
 	
 ## Setup
 Para rodar esse projeto, use localmente npm:
