@@ -39,6 +39,7 @@ export class CEPController {
     @Post()
     @UseInterceptors(new ValidatorInterceptor(new CreateCEPContract()))
     async post(@Body() model: CreateCEPDTO) {
+        
         try {
             const newCEP = new CEP(model.codigo_loja, model.faixa_inicio, model.faixa_fim)
             const resul = await this.accountService.valid(newCEP.faixa_inicio)
