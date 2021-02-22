@@ -5,7 +5,7 @@ import { BackofficeModule } from './modules/backoffice/backoffice.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://admin:xpto123@cluster0.snge5.mongodb.net/db_cep?retryWrites=true&w=majority'),
+    MongooseModule.forRoot('mongodb+srv://admin:xpto123@cluster0.snge5.mongodb.net/db_ceps?retryWrites=true&w=majority'),
     // TypeOrmModule.forRoot({
     //   type: 'mysql',
     //   host: 'localhost',

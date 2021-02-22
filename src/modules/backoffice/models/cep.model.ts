@@ -1,6 +1,6 @@
 export class CEP {
-        constructor(public _id: string,
+        constructor(
                 public codigo_loja: string,
-                public faixa_inicio: string,
-                public faixa_fim: string) { }
+                public faixa_inicio: number,
+                public faixa_fim: number) { }
 }
