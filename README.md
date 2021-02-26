@@ -14,6 +14,7 @@ Project is created with:
 * Swagger version: 4.7.15
 
 ## Documentation
+# Swagger Open API
 ```
 $ npm run dev:server
 $localhost:3000/docs
