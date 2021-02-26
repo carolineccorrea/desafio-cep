@@ -29,6 +29,12 @@ export class AccountService {
     async update(_id: string, data: any): Promise<ICEP> {
         return await this.cepModel.findOneAndUpdate({ _id }, data);
     }
+    async delete(id: string) {
+        const cepApagado = this.cepModel.findOneAndDelete({ _id: id }).exec();
+    
+        return (await cepApagado).remove();
+      }
+    
     async valid(fi): Promise<boolean> {
         const dados = await this.cepModel.find().exec()
         let re;

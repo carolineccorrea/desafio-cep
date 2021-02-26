@@ -39,7 +39,7 @@ export class CEPController {
     @Post()
     @UseInterceptors(new ValidatorInterceptor(new CreateCEPContract()))
     async post(@Body() model: CreateCEPDTO) {
-        
+
         try {
             const newCEP = new CEP(model.codigo_loja, model.faixa_inicio, model.faixa_fim)
             const resul = await this.accountService.valid(newCEP.faixa_inicio)
@@ -55,13 +55,15 @@ export class CEPController {
         }
     }
     @Put(':id')
-    async put(@Param('id') _id, @Body() body) {
+    async put(@Param('id') id, @Body() body) {
+        await this.accountService.update(id,body)
         return new Result('Cep atualizado com sucesso', true, body, null)
     }
 
     @Delete(':id')
-    async delete(@Param('id') _id) {
-        return new Result('Cep deletado com sucesso', true, _id, null);
+    async Delete(@Param('id') id) {
+        await this.accountService.delete(id);
+        return new Result('Cep deletado com sucesso',true,id,null)
     }
 
 }
