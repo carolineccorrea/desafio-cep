@@ -17,7 +17,7 @@ Project is created with:
 Swagger Open API
 ```
 $ npm run dev:server
-$localhost:3000/docs
+$ localhost:3000/docs
 
 ```
 	
