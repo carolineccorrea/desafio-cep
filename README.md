@@ -2,7 +2,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [documentation](#documentation)
+* [Documentation](#documentation)
 
 ## General info
 Projeto de cadastro de ceps
