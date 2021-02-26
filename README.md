@@ -15,10 +15,10 @@ Project is created with:
 
 ## Documentation
 Swagger Open API :fire:
+
 ```
 $ npm run dev:server
 $ localhost:3000/docs
-
 ```
 	
 ## Setup
