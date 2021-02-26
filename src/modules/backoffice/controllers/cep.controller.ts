@@ -43,7 +43,6 @@ export class CEPController {
         try {
             const newCEP = new CEP(model.codigo_loja, model.faixa_inicio, model.faixa_fim)
             const resul = await this.accountService.valid(newCEP.faixa_inicio)
-            console.log(resul)
             if (resul) {
                 const cep = await this.accountService.create(newCEP);
                 return new Result('Cep criado com sucesso', true, cep, null);
