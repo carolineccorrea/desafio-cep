@@ -2,7 +2,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [documentation](#documentação)
+* [documentation](#documentation)
 
 ## General info
 Projeto de cadastro de ceps
@@ -13,7 +13,7 @@ Project is created with:
 * Mongodb version: 7.2.2
 * Swagger version: 4.7.15
 
-##Documentação
+## Documentation - Swagger Open API
 ```
 $ npm run dev:server
 $localhost:3000/docs
