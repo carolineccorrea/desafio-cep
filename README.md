@@ -13,7 +13,7 @@ Project is created with:
 * Mongodb version: 7.2.2
 * Swagger version: 4.7.15
 
-## Documentation - Swagger Open API
+## Documentation
 ```
 $ npm run dev:server
 $localhost:3000/docs
