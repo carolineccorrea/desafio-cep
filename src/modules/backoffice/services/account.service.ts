@@ -29,7 +29,6 @@ export class AccountService {
     async update(_id: string, data: any): Promise<ICEP> {
         return await this.cepModel.findOneAndUpdate({ _id }, data);
     }
-
     async valid(fi): Promise<boolean> {
         const dados = await this.cepModel.find().exec()
         let re;
@@ -49,4 +48,5 @@ export class AccountService {
             return re;
         }
     }
+
 }
