@@ -32,18 +32,21 @@ export class AccountService {
 
     async valid(fi): Promise<boolean> {
         const dados = await this.cepModel.find().exec()
-        // let re = true;
-        if (dados) {
-            let re;
+        let re;
+        if (dados === undefined || dados === null) {
+            // let re;
             dados.forEach((e) => {
-                if (fi === e.faixa_fim) {
+                if (fi === e.faixa_fim || fi < e.faixa_fim) {
                     re = false;
                 }
                 else {
                     re = true;
                 }
             })
-        return re;
+            return re;
+        } else {
+            re = true;
+            return re;
         }
     }
 }
