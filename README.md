@@ -2,14 +2,23 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [documentation](#documentação)
 
 ## General info
 Projeto de cadastro de ceps
 	
 ## Technologies
 Project is created with: 
-* Nest Framework: ^7.5.1
-* Mongodb version: ^7.2.2
+* Nest Framework: 7.5.1
+* Mongodb version: 7.2.2
+* Swagger version: 4.7.15
+
+##Documentação
+```
+$ npm run dev:server
+$localhost:3000/docs
+
+```
 	
 ## Setup
 Para rodar esse projeto, use localmente npm:
@@ -22,11 +31,10 @@ $ npm run dev:server
 ```
 ## O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
 
-## Exemplos de uso
+## Exemplos de uso { GET , POST , PUT , DELETE }
 http://localhost:3000/v1/ceps
 
 * para adicionar um CEP 
-* use Content-Type - application/json
 
 ```
 {
