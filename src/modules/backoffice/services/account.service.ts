@@ -33,6 +33,9 @@ export class AccountService {
         const dados = await this.cepModel.find().exec()
         let re;
         if (dados === undefined || dados === null) {
+            re = true;
+            return re;
+        } else {
             // let re;
             dados.forEach((e) => {
                 if (fi === e.faixa_fim || fi < e.faixa_fim) {
@@ -43,10 +46,6 @@ export class AccountService {
                 }
             })
             return re;
-        } else {
-            re = true;
-            return re;
         }
     }
-
 }
