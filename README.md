@@ -51,4 +51,4 @@ http://localhost:3000/v1/ceps
 
 ```
 ---
-Desenvolvido por Caroline Correa
+Desenvolvido por Caroline Correa 👽
