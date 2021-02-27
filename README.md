@@ -1,26 +1,29 @@
 ## Table of contents
 * [General info](#general-info)
-* [Technologies](#technologies)
+* [Tecnologias](#tecnologias)
 * [Setup](#setup)
-* [Documentation](#documentation)
+* [Documentação](#documentação)
 
 ## General info
 Projeto de cadastro de ceps
 	
-## Technologies
+## 🚀 Technologias
 Project is created with: 
-* Nest Framework: 7.5.1
-* Mongodb version: 7.2.2
-* Swagger version: 4.7.15
+* [Nest Framework](https://nestjs.com)
+* [Mongoose](https://mongoosejs.com)
+* [Swagger](https://swagger.io)
+* [Axios](https://github.com/axios/axios)
+---
 
-## Documentation
-Swagger Open API :fire:
+## 📰 Documentação
+Swagger Open API 🔥
 
 ```
 $ npm run dev:server
 $ localhost:3000/docs
 ```
-	
+---
+
 ## Setup
 Para rodar esse projeto, use localmente npm:
 
@@ -30,6 +33,8 @@ $ cd desafio-cep
 $ npm install
 $ npm run dev:server
 ```
+---
+
 ## O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
 
 ## Exemplos de uso { GET , POST , PUT , DELETE }
@@ -45,3 +50,5 @@ http://localhost:3000/v1/ceps
 }
 
 ```
+---
+Desenvolvido por Caroline Correa
